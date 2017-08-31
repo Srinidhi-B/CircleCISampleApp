@@ -3,7 +3,8 @@ machine:
   java:
     version: openjdk7
   environment:
-    ANDROID_HOME: /usr/local/android-sdk-linux
+          JVM_OPTS: -Xmx3200m
+          ANDROID_HOME: /usr/local/android-sdk-linux
 
 
 dependencies:
