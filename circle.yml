@@ -6,6 +6,7 @@ machine:
     ANDROID_HOME: /usr/local/android-sdk-linux
     INFER_HOME: /home/ubuntu/.infer/infer-linux64-v0.1.0/infer/infer
     PATH: $INFER_HOME/bin:$PATH
+
 dependencies:
   cache_directories:
     - ~/.gradle
@@ -13,6 +14,7 @@ dependencies:
     - ~/.infer
 
   override:
+    - chmod +x gradlew
     - echo y | android update sdk --no-ui --filter "android-22,build-tools-22.0.1"
     - echo y | android update sdk --no-ui --all --filter "platform-tools, tools"
     - echo y | android update sdk --no-ui --all --filter "android-22, build-tools-22.0.1"
