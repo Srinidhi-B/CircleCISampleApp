@@ -5,8 +5,8 @@ machine:
           JVM_OPTS: -Xmx3200m
           ANDROID_HOME: /usr/local/android-sdk-linux
 
-- run:
-    ./gradlew androidDependencies
+#- run:
+#    ./gradlew androidDependencies
 
 dependencies:
   cache_directories:
