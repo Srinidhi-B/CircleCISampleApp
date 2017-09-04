@@ -46,5 +46,5 @@ test:
 
     # copy results
     - cp -r app/build/outputs $CIRCLE_ARTIFACTS
-    - cp -r app/infer-out $CIRCLE_ARTIFACTS
+    
     - cp -r app/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
