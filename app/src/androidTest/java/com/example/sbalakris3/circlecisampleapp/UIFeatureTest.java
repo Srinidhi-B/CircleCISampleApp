@@ -32,7 +32,7 @@ public class UIFeatureTest {
     public void userSignsIn(){
         onView(withId(R.id.userNameET)).perform(typeText("apollo-unauthorized"));
         onView(withId(R.id.passwordET)).perform(typeText("apollo-unauthorized"));
-        onView(withId(R.id.loginButton)).perform(click());
+//        onView(withId(R.id.loginButton)).perform(click());
       //    onView(withText("Logged in")).check(matches(isDisplayed()));
     }
 }
