@@ -28,7 +28,7 @@ run:
 test:
   pre:
     # start the emulator
-    - emulator -avd circleci-android22 -no-skin -no-audio -no-window -no-boot-anim:
+    - emulator -avd circleci-android21 -no-skin -no-audio -no-window -no-boot-anim:
         background: true
         parallel: true
   override:
