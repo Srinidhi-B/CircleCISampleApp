@@ -40,6 +40,7 @@ test:
     - circle-android wait-for-boot
     - sleep 30
     # run tests  against the emulator.
+    -  adb shell input keyevent 82
     - ./gradlew connectedAndroidTest
 
 
