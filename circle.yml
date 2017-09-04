@@ -1,11 +1,12 @@
 machine:
-  timezone: Asia/Tokyo
   java:
     version: openjdk7
   environment:
           JVM_OPTS: -Xmx3200m
           ANDROID_HOME: /usr/local/android-sdk-linux
 
+- run:
+    ./gradlew androidDependencies
 
 dependencies:
   cache_directories:
@@ -34,8 +35,7 @@ test:
     - circle-android wait-for-boot
     # run tests  against the emulator.
     - ./gradlew connectedAndroidTest
-    # run lint checker
-    - lint app --html app/build/outputs/result.html
+
 
     # copy results
     - cp -r app/build/outputs $CIRCLE_ARTIFACTS
