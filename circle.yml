@@ -21,7 +21,7 @@ dependencies:
     - echo y | android update sdk --no-ui --all --filter "extra-android-support"
 
 run:
-    ./gradle androidDependencies
+    ./gradlew androidDependencies
 
 test:
   pre:
@@ -32,11 +32,11 @@ test:
   override:
 
     # run infer
-    - ./gradle clean
+    - ./gradlew clean
     # wait for it to have booted
     - circle-android wait-for-boot
     # run tests  against the emulator.
-    - ./gradle connectedAndroidTest
+    - ./gradlew connectedAndroidTest
 
 
     # copy results
