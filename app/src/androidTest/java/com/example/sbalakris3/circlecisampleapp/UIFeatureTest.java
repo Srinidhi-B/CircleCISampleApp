@@ -4,6 +4,7 @@ package com.example.sbalakris3.circlecisampleapp;
  * Created by sbalakris3 on 8/29/2017.
  */
 
+import android.support.test.espresso.action.ViewActions;
 import android.support.test.rule.ActivityTestRule;
 
 import org.junit.Rule;
@@ -31,8 +32,10 @@ public class UIFeatureTest {
     @Test
     public void userSignsIn(){
         onView(withId(R.id.userNameET)).perform(typeText("apollo-unauthorized"));
-        onView(withId(R.id.passwordET)).perform(typeText("apollo-unauthorized"));
-//        onView(withId(R.id.loginButton)).perform(click());
+        onView(withId(R.id.passwordET)).perform(typeText("apollo-unauthorized")).perform(ViewActions.closeSoftKeyboard());
+
+
+        onView(withId(R.id.loginButton)).perform(click());
       //    onView(withText("Logged in")).check(matches(isDisplayed()));
     }
 }
